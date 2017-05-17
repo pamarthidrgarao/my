@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse" ng-controller="NavCtrl as nv">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">MySchool</a>
+        </div>
+        <div class="navbar-custom-menu" style="float: right;" ng-init="isProfileOpen = true">
+            <ul class="nav navbar-nav" ng-init="isMenuOpen = true">
+                <li class="dropdown user user-menu open my-menu" ng-click="isMenuOpen =! isMenuOpen">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <ul class="dropdown-menu my-dropdown-menu" ng-hide="isMenuOpen">
+                        <li><a href="">MySchools</a></li>
+                        <li><a href="">Report</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user user-menu open">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" ng-click="isProfileOpen =! isProfileOpen">
+                        <img src="{{img}}" class="user-image" alt="User Image">
+                        <span class="hidden-xs">{{name}}</span>
+                    </a>
+                    <ul class="dropdown-menu" ng-hide="isProfileOpen">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src="{{img}}" class="prof-img" alt="User Image">
+                            <p>{{name}}</p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="" class="btn btn-default btn-flat" onclick="myProfile()">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="" class="btn btn-default btn-flat" onclick="logOut()">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

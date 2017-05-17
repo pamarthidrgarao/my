@@ -1,0 +1,145 @@
+{
+    "menuItems": [{
+        "title": "Projects",
+        "value": "30+",
+        "theme": "aqua",
+        "icon": "puzzle-piece"
+    }, {
+        "title": "Designs",
+        "value": "250+",
+        "theme": "red",
+        "icon": "paint-brush"
+    }, {
+        "title": "Awards",
+        "value": "50+",
+        "theme": "green",
+        "icon": "trophy"
+    }, {
+        "title": "Achivements",
+        "value": "34+",
+        "theme": "green",
+        "icon": "trophy"
+    }],
+
+
+    "searchFields": [{
+        "type": "select",
+        "name": "state",
+        "label": "State",
+        "required": true,
+        "data": "",
+        "labelSize": 3,
+        "options": [{ "name": "a" }, { "name": "b" }]
+    }, {
+        "type": "select",
+        "name": "districtname",
+        "label": "District",
+        "required": true,
+        "data": "",
+        "labelSize": 3,
+        "options": [{ "name": "None" }]
+    }, {
+        "type": "select",
+        "name": "mandal",
+        "label": "Mandal",
+        "required": true,
+        "data": "",
+        "labelSize": 3,
+        "options": [{ "name": "None" }]
+    }, {
+        "type": "text",
+        "name": "area",
+        "label": "City/Village",
+        "required": true,
+        "data": "",
+        "labelSize": 3
+
+    }],
+
+    "tableHeader": ["Profile", "First Name", "Last Name", "Birth Date", "Balance", "Email"],
+    "tableData": [{
+        "firstName": "Laurent",
+        "lastName": "Rao",
+        "birthDate": "1987-05-21",
+        "balance": 102,
+        "email": "whatever@gmail.com",
+        "img": "img/avatar.png"
+    }, {
+        "firstName": "Blandine",
+        "lastName": "Faivre",
+        "birthDate": "1987-04-25",
+        "balance": -2323.22,
+        "email": "oufblandou@gmail.com",
+        "img": "img/avatar3.png"
+    }, {
+        "firstName": "Francoise",
+        "lastName": "Frere",
+        "birthDate": "1955-08-27",
+        "balance": 42343,
+        "email": "raymondef@gmail.com",
+        "img": "img/avatar2.png"
+    }, {
+        "firstName": "Laurent",
+        "lastName": "Renard",
+        "birthDate": "1987-05-21",
+        "balance": 102,
+        "email": "whatever@gmail.com",
+        "img": "img/avatar.png"
+    }, {
+        "firstName": "Blandine",
+        "lastName": "Faivre",
+        "birthDate": "1987-04-25",
+        "balance": -2323.22,
+        "email": "oufblandou@gmail.com",
+        "img": "img/avatar3.png"
+    }, {
+        "firstName": "Francoise",
+        "lastName": "Frere",
+        "birthDate": "1955-08-27",
+        "balance": 42343,
+        "email": "raymondef@gmail.com",
+        "img": "img/avatar2.png"
+    }, {
+        "firstName": "Laurent",
+        "lastName": "Renard",
+        "birthDate": "1987-05-21",
+        "balance": 102,
+        "email": "whatever@gmail.com",
+        "img": "img/avatar.png"
+    }, {
+        "firstName": "Blandine",
+        "lastName": "Faivre",
+        "birthDate": "1987-04-25",
+        "balance": -2323.22,
+        "email": "oufblandou@gmail.com",
+        "img": "img/avatar3.png"
+    }, {
+        "firstName": "Francoise",
+        "lastName": "Frere",
+        "birthDate": "1955-08-27",
+        "balance": 42343,
+        "email": "raymondef@gmail.com",
+        "img": "img/avatar2.png"
+    }, {
+        "firstName": "Laurent",
+        "lastName": "Renard",
+        "birthDate": "1987-05-21",
+        "balance": 102,
+        "email": "whatever@gmail.com",
+        "img": "img/avatar.png"
+    }, {
+        "firstName": "Blandine",
+        "lastName": "Faivre",
+        "birthDate": "1987-04-25",
+        "balance": -2323.22,
+        "email": "oufblandou@gmail.com",
+        "img": "img/avatar3.png"
+    }, {
+        "firstName": "Francoise",
+        "lastName": "Frere",
+        "birthDate": "1955-08-27",
+        "balance": 42343,
+        "email": "raymondef@gmail.com",
+        "img": "img/avatar2.png"
+    }]
+}

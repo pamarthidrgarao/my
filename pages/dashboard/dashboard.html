@@ -1,0 +1,59 @@
+<div ng-include="'header.html'"></div>
+<div class="my-header">
+    <h3>Dashboard</h3>
+</div>
+<uib-accordion ng-init="isOpen = true">
+    <div uib-accordion-group class="panel-default" is-open="isOpen">
+        <uib-accordion-heading ng-click="isOpen = !isOpen">
+            Search <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i>
+        </uib-accordion-heading>
+        <form name="myForm" class="form-vertical " role="form" ng-submit="submitForm()">
+            <div ng-repeat="field in vm.home.fields">
+                <ng-form name="form">
+                    <!-- TEXT FIELDS -->
+                    <div ng-if="field.type=='text'" class="form-group col-xs-{{field.labelSize}} col-md-{{field.labelSize}}">
+                        <label for="name" class="control-label">{{field.label}}</label>
+                        <input type="{{ field.type }}" dynamic-name="field.name" id="{{field.name}}" data-ng-model="field.data" class="form-control" required/>
+                        <span data-ng-show=" {{'form.'+field.name+'.$dirty && form.'+field.name+'.$error.required'}}">Required!</span>
+                    </div>
+                    <!-- SELECT FIELDS -->
+                    <div ng-if="field.type=='select'" class="form-group col-xs-{{field.labelSize}} col-md-{{field.labelSize}}">
+                        <label for="name" class="control-label">{{field.label}}</label>
+                        <select data-ng-model="field.data" ng-options="option.name for option in field.options" class="form-control"></select>
+                        <span data-ng-show=" {{'form.'+field.name+'.$dirty && form.'+field.name+'.$error.required'}}">Required!</span>
+                    </div>
+                </ng-form>
+            </div>
+            <button type="button" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</uib-accordion>
+<uib-accordion ng-init="isOpen1 = true">
+    <div uib-accordion-group class="panel-default" is-open="isOpen1">
+        <uib-accordion-heading >
+            Report <i class="pull-right glyphicon" ng-click="isOpen1 = !isOpen1" ng-class="{'glyphicon-chevron-down': isOpen1, 'glyphicon-chevron-right': !isOpen1}"></i>
+            <i class="export-icon fa fa-file-excel-o" aria-hidden="false"></i>
+            <i class="export-icon fa fa-file-pdf-o" aria-hidden="true"></i>
+        </uib-accordion-heading>
+        <div class="table-responsive">
+            <table st-table="rowCollection" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th ng-repeat="header in vm.home.headers" st-sort="{{header}}">{{header}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in vm.rowCollection">
+                        <td><img src="{{row.img}}" alt="" class="img-circle"></td>
+                        <td>{{row.firstName | uppercase}}</td>
+                        <td>{{row.lastName}}</td>
+                        <td>{{row.birthDate | date}}</td>
+                        <td>{{row.balance | currency}}</td>
+                        <td><a ng-href="mailto:{{row.email}}">{{row.email}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
+        </div>
+    </div>
+</uib-accordion>
